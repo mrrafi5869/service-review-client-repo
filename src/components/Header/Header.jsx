@@ -1,4 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+// const element = <FontAwesomeIcon icon={faCoffee} />
 
 const Header = () => {
   return (
@@ -55,7 +61,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <Link to='/' className="btn btn-ghost normal-case text-xl">DreamWeaver</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
