@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faCameraRetro, faPhone, faArrowAltCircleRight} from "@fortawesome/free-solid-svg-icons";
 import './Home.css'
+import Service from "../Service/Service";
 
 const Home = () => {
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch('data.json')
+    .then(res => res.json())
+    .then(data => setServices(data))
+  } , [])
   return (
     <div>
       <div className="carousel w-full h-2/4">
@@ -68,6 +75,13 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* services */}
+      <div>
+          {
+            services.map(service => <Service ></Service>)
+          }
+      </div>
+      {/* Reason for hire us */}
       <section className="flex w-9/12 mx-auto my-20">
         <div className="h-2/5 w-3/5 relative mr-20">
             <img className="rounded-xl" src="https://i.ibb.co/1XRPsCN/natilyn-hicks-natilyn-photography-ab-Pr-Ovb-Ld-Aw-unsplash.jpg" alt="" />
@@ -99,6 +113,7 @@ const Home = () => {
             </div>
         </div>
       </section>
+      {/* gallery/Photos */}
       <section className="w-9/12 mx-auto relative my-32">
           <div className="image">
             <img src="https://i.ibb.co/qy9ypP8/jakob-owens-DQPP9r-VLYGQ-unsplash.jpg" alt="" className="w-full rounded-xl" />

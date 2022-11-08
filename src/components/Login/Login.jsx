@@ -32,9 +32,7 @@ const Login = () => {
                 className="input input-bordered"
               />
               <label className="label">
-                <Link className="label-text-alt link link-hover">
-                  Forgot password?
-                </Link>
+                <p>Don't Have an Account?Please <Link to='/register'  className='text-blue-500 underline'>Login</Link></p>
               </label>
             </div>
             <div className="form-control mt-6">

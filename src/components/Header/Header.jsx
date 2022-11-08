@@ -40,13 +40,13 @@ const Header = () => {
               <Link to="/">HOME</Link>
             </li>
             <li>
-              <a>SERVICES</a>
+              <Link to='/login'>LOGIN</Link>
             </li>
             <li>
-              <a>PRICING</a>
+              <Link to='/register'>REGISTER</Link>
             </li>
             <li>
-              <a>HELP</a>
+              <Link to='/blog'>BLOG</Link>
             </li>
           </ul>
         </div>
@@ -75,13 +75,13 @@ const Header = () => {
               <Link to="/">HOME</Link>
             </li>
             <li>
-              <a>SERVICES</a>
+              <Link to='/login'>LOGIN</Link>
             </li>
             <li>
-              <a>CONTACT US</a>
+              <Link to='/register'>REGISTER</Link>
             </li>
             <li>
-              <a>BLOG</a>
+              <Link to='/blog'>BLOG</Link>
             </li>
           </ul>
         </div>
