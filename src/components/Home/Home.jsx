@@ -81,7 +81,7 @@ const Home = () => {
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 my-52">
               {
                 services.map(service => <Service 
-                  key={service.id}
+                  key={service._id}
                   service={service}
                 ></Service>)
               }

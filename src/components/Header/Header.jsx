@@ -52,6 +52,8 @@ const Header = () => {
             <h1 className="mx-2">
             {user?.uid ? (
             <>
+              <button className="btn btn-sm mr-4">My Reviews</button>
+              <button className="btn btn-sm mr-4">Add Service</button>
               <button className="btn btn-sm mr-4" onClick = {handleLogOut}>Logout</button>
               <span>{user?.displayName}</span>
               <img
@@ -105,17 +107,19 @@ const Header = () => {
             <li>
             {user?.uid ? (
             <>
+              <button className="btn btn-sm text-white w-20">My Reviews</button>
+              <button className="btn btn-sm text-white w-20">Add Service</button>
               <button className="btn btn-sm text-white w-20" onClick = {handleLogOut}>Logout</button>
               <p className="text-black">{user?.displayName}</p>
             </>
             ) : (
               <>
-              <div className="">
-                  <Link to="/login">LOGIN</Link>
-              </div>
-              <div>
-                <Link to="/register">REGISTER</Link>
-              </div>
+                <div>
+                    <Link to="/login">LOGIN</Link>
+                </div>
+                <div>
+                  <Link to="/register">REGISTER</Link>
+                </div>
               </>
             )}
           </li>

@@ -1,7 +1,7 @@
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { } from "@fortawesome/free-solid-svg-icons";
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from '../../Contexts/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
@@ -10,7 +10,10 @@ const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
   const {signIn, googleSignIn} = useContext(authContext);
+  const location = useLocation();
   const navigate = useNavigate();
+
+  const from = location?.state?.from.pathname || '/'
 
   const handleSubmit = (event) => {
       event.preventDefault();
@@ -20,7 +23,7 @@ const Login = () => {
       signIn(email, password)
       .then(result => {
         const user = result.user;
-        navigate('/')
+        navigate(from, {replace: true})
         console.log(user);
       })
       .catch(err => console.error(err));
