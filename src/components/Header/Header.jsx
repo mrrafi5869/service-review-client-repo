@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,8 +7,15 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { authContext } from "../../Contexts/AuthProvider";
 
 const Header = () => {
+  const {user, logOut} = useContext(authContext);
+
+  const handleLogOut = () => {
+      logOut();
+  }
+
   return (
     <div className="navbar bg-base-100 w-9/12 mx-auto">
       <div className="navbar-start">
@@ -35,19 +42,37 @@ const Header = () => {
       </div>
       <div className="navbar-end">
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">
+          <ul className="menu menu-horizontal p-0 flex items-center font-semibold text-lg">
             <li>
               <Link to="/">HOME</Link>
             </li>
             <li>
-              <Link to='/login'>LOGIN</Link>
-            </li>
-            <li>
-              <Link to='/register'>REGISTER</Link>
-            </li>
-            <li>
               <Link to='/blog'>BLOG</Link>
             </li>
+            <h1 className="mx-2">
+            {user?.uid ? (
+            <>
+              <button className="btn btn-sm mr-4" onClick = {handleLogOut}>Logout</button>
+              <span>{user?.displayName}</span>
+              <img
+                className="mx-5 inline"
+                style={{ height: "30px" }}
+                rounded-full
+                src={user?.photoURl}
+                alt=""
+              />
+            </>
+            ) : (
+              <div className="flex lg:flex-row md: flex-col">
+                <span className="mr-5">
+                  <Link to="/login">LOGIN</Link>
+                </span>
+                <span className="mr-5">
+                  <Link to="/register">REGISTER</Link>
+                </span>
+              </div>
+            )}
+          </h1>
           </ul>
         </div>
         <div className="dropdown">
@@ -69,20 +94,31 @@ const Header = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 mr5 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
               <Link to="/">HOME</Link>
             </li>
             <li>
-              <Link to='/login'>LOGIN</Link>
-            </li>
-            <li>
-              <Link to='/register'>REGISTER</Link>
-            </li>
-            <li>
               <Link to='/blog'>BLOG</Link>
             </li>
+            <li>
+            {user?.uid ? (
+            <>
+              <button className="btn btn-sm text-white w-20" onClick = {handleLogOut}>Logout</button>
+              <p className="text-black">{user?.displayName}</p>
+            </>
+            ) : (
+              <>
+              <div className="">
+                  <Link to="/login">LOGIN</Link>
+              </div>
+              <div>
+                <Link to="/register">REGISTER</Link>
+              </div>
+              </>
+            )}
+          </li>
           </ul>
         </div>
       </div>
