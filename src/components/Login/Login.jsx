@@ -3,13 +3,13 @@ import { } from "@fortawesome/free-solid-svg-icons";
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from '../../Contexts/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const googleProvider = new GoogleAuthProvider();
-
+const githubProvider = new GithubAuthProvider();
 
 const Login = () => {
-  const {signIn, googleSignIn} = useContext(authContext);
+  const {signIn, googleSignIn, githubSignIn} = useContext(authContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const Login = () => {
       signIn(email, password)
       .then(result => {
         const user = result.user;
-        navigate(from, {replace: true})
+        navigate(from, {replace: true});
         console.log(user);
       })
       .catch(err => console.error(err));
@@ -33,14 +33,20 @@ const Login = () => {
     googleSignIn(googleProvider)
     .then(result => {
       const user = result.user;
-      navigate('/');
+      navigate(from, {replace: true});
       console.log(user);
     })
     .catch(err => console.error(err));
   };
 
-  const handleGithubLogin = (githubProvider) => {
-
+  const handleGithubLogin = () => {
+    githubSignIn(githubProvider)
+    .then(result => {
+      const user = result.user;
+      navigate(from, {replace: true});
+      console.log(user);
+    })
+    .catch(err => console.error(err));
   };
   
   return (
@@ -83,7 +89,7 @@ const Login = () => {
             <div className="form-control mt-6">
                 <p className="text-center text-xl text-blue-500 font-semibold font-mono mb-3">Login with social media</p>
               <button onClick={handleGoogleSignIn} className="btn btn-ghost border-black mb-3 text-red-400"><FaGoogle className='text-blue-500 text-xl mr-2'></FaGoogle> GOOGLE</button>
-              <button className="btn btn-ghost border-black"><FaGithub className='text-xl mr-2'></FaGithub>GITHUB</button>
+              <button onClick={handleGithubLogin} className="btn btn-ghost border-black"><FaGithub className='text-xl mr-2'></FaGithub>GITHUB</button>
             </div>
           </form>
         </div>
