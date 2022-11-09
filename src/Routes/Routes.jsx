@@ -25,6 +25,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/blog",
                 element: <Blog></Blog>
+            },
+            {
+                path: "/service/:id",
+                element: ({params}) => fetch(`http://localhost:3000/service/${params.id}`)
             }
         ]
     }

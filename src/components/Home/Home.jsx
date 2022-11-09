@@ -76,7 +76,7 @@ const Home = () => {
         </div>
       </div>
       {/* services */}
-      <div className="w-9/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-52 bg-slate-300">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 my-52">
           {
             services.map(service => <Service 
               key={service.id}
