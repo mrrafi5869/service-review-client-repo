@@ -4,6 +4,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const handleSubmit = (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.email.value;
+      const password = form.password.value;
+      console.log(email, password);
+  }
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col">
@@ -11,7 +18,7 @@ const Login = () => {
           <h1 className="text-5xl font-bold">Login now!</h1>
         </div>
         <div className="card flex-shrink-0 w-96 max-w-sm shadow-2xl bg-base-100">
-          <form className="card-body">
+          <form onClick={handleSubmit} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>

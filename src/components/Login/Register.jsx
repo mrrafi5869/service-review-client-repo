@@ -1,10 +1,17 @@
 import React from 'react';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, email, password);
+}
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div onClick={handleSubmit} className="hero min-h-screen bg-base-200">
           <div className="hero-content flex-col">
             <div className="text-center lg:text-left">
               <h1 className="text-5xl font-bold">Register now!</h1>

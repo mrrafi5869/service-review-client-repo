@@ -19,8 +19,8 @@ const Service = (params) => {
         </h2>
         <p>{desc.length > 100 ? desc.slice(0, 99) + "..." : desc}</p>
         <div className="card-actions justify-end">
-          <div className="btn">{price}</div>
-          <Link to={`/service/${id}`} className="btn btn-outline rounded-lg font-semibold hover:bg-gray-500 hover:text-white">Details<FontAwesomeIcon icon={faArrowRight} className="ml-1"></FontAwesomeIcon></Link>
+          <div className="bg-blue-400 w-full p-3 border-2 text-white text-center font-semibold rounded-lg">{price}</div>
+          <Link to={`/service/${id}`} className="btn btn-outline rounded-lg font-semibold hover:bg-gray-500 hover:text-white w-full">Details<FontAwesomeIcon icon={faArrowRight} className="ml-1"></FontAwesomeIcon></Link>
         </div>
       </div>
     </div>

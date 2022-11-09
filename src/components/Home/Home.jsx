@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faCameraRetro, faPhone, faArrowAltCircleRight} from "@fortawesome/free-solid-svg-icons";
 import './Home.css'
 import Service from "../Service/Service";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch('data.json')
+    fetch('http://localhost:5000/service')
     .then(res => res.json())
     .then(data => setServices(data))
   } , [])
@@ -76,13 +77,18 @@ const Home = () => {
         </div>
       </div>
       {/* services */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 my-52">
-          {
-            services.map(service => <Service 
-              key={service.id}
-              service={service}
-            ></Service>)
-          }
+      <div>
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 my-52">
+              {
+                services.map(service => <Service 
+                  key={service.id}
+                  service={service}
+                ></Service>)
+              }
+          </div>
+          <div className="text-center">
+                <Link to='/allservices' className="btn btn-warning rounded-lg font-semibold">See All</Link>
+          </div>
       </div>
       {/* Reason for hire us */}
       <section className="flex w-9/12 mx-auto my-20">
