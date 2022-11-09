@@ -76,9 +76,12 @@ const Home = () => {
         </div>
       </div>
       {/* services */}
-      <div>
+      <div className="w-9/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-52 bg-slate-300">
           {
-            services.map(service => <Service ></Service>)
+            services.map(service => <Service 
+              key={service.id}
+              service={service}
+            ></Service>)
           }
       </div>
       {/* Reason for hire us */}
