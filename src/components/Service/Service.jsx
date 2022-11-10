@@ -24,8 +24,9 @@ const Service = (params) => {
           <FontAwesomeIcon icon={faCameraRetro}></FontAwesomeIcon>
         </h2>
         <p>{desc.length > 100 ? desc.slice(0, 99) + "..." : desc}</p>
+        <p className="font-bold ml-60">Price:{price}</p>
         <div className="card-actions justify-end">
-          <div className="bg-blue-400 w-full p-3 border-2 text-white text-center font-semibold rounded-lg">{price}</div>
+          <Link to= {`/review/${_id}`} className="bg-blue-400 w-full p-3 border-2 text-white text-center font-semibold rounded-lg">Review</Link>
           <Link to={`/service/${_id}`} className="btn btn-outline rounded-lg font-semibold hover:bg-gray-500 hover:text-white w-full">Details<FontAwesomeIcon icon={faArrowRight} className="ml-1"></FontAwesomeIcon></Link>
         </div>
       </div>

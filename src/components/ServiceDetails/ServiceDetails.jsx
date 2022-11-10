@@ -2,11 +2,11 @@ import { faCameraRetro } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
-import { authContext } from "../../Contexts/AuthProvider";
+import { AuthContext } from "../../Contexts/AuthProvider";
 
 const ServiceDetails = () => {
   const {img, price, desc, name, review } = useLoaderData();
-  const {user} = useContext(authContext);
+  const {user} = useContext(AuthContext);
   return (
     <div className="flex w-9/12 mx-auto my-36 justify-between">
       <div className="card w-96 bg-base-100 shadow-xl mr-40">

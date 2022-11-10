@@ -2,14 +2,14 @@ import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { } from "@fortawesome/free-solid-svg-icons";
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { authContext } from '../../Contexts/AuthProvider';
+import { AuthContext } from '../../Contexts/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
 const Login = () => {
-  const {signIn, googleSignIn, githubSignIn} = useContext(authContext);
+  const {signIn, googleSignIn, githubSignIn} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 

@@ -7,10 +7,10 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { authContext } from "../../Contexts/AuthProvider";
+import { AuthContext } from "../../Contexts/AuthProvider";
 
 const Header = () => {
-  const {user, logOut} = useContext(authContext);
+  const {user, logOut} = useContext(AuthContext);
 
   const handleLogOut = () => {
       logOut();

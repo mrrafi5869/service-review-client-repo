@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { authContext } from '../../Contexts/AuthProvider';
+import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Register = () => {
-  const {createUser} = useContext(authContext);
+  const {createUser} = useContext(AuthContext);
   const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
