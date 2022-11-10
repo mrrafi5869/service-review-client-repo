@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const SendReview = () => {
+  useTitle("SendReview")
   const { user } = useContext(AuthContext);
   const { _id, name, price} = useLoaderData();
   const navigate = useNavigate();
@@ -88,7 +90,6 @@ const SendReview = () => {
           placeholder="Bio"
           required
         >
-          Your Message
         </textarea>
         <div className="flex justify-center my-9">
           <input className="btn btn-primary w-32" type="submit" value="Send" />

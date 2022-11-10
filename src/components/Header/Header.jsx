@@ -52,8 +52,12 @@ const Header = () => {
             <h1 className="mx-2">
             {user?.uid ? (
             <>
-              <button className="btn btn-sm mr-4">My Reviews</button>
-              <button className="btn btn-sm mr-4">Add Service</button>
+              <Link to='/myreviews'>
+                <button className="btn btn-sm mr-4">My Reviews</button>
+              </Link>
+              <Link to='/myservices'>
+                <button className="btn btn-sm mr-4">Add Service</button>
+              </Link>
               <button className="btn btn-sm mr-4" onClick = {handleLogOut}>Logout</button>
               <span>{user?.displayName}</span>
               <img
