@@ -4,29 +4,39 @@ import { AuthContext } from "../../Contexts/AuthProvider";
 import useTitle from "../../hooks/useTitle";
 
 const Register = () => {
-  const { createUser, loading } = useContext(AuthContext);
+  const { createUser, loading, updateUserProfile } = useContext(AuthContext);
   useTitle("Register")
   const navigate = useNavigate();
-  if (loading) {
-
-      <div className="w-24 mx-auto my-44">
-        <button className="btn btn-square loading"></button>
-      </div>
-  }
+  if(loading){
+    return <div className='w-24 mx-auto my-44'><button className="btn btn-square loading"></button></div>
+}
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
+    const photoURL = form.image.value;
     const email = form.email.value;
     const password = form.password.value;
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         navigate("/");
+        handleUpdateUserProfile(name, photoURL)
         console.log(user);
       })
       .catch((error) => console.error(error));
   };
+
+  const handleUpdateUserProfile = (name, photoURL) => {
+    const profile = {
+        displayName: name,
+        photoURL: photoURL
+    }
+
+    updateUserProfile(profile)
+        .then(() => { })
+        .catch(error => console.error(error));
+}
   return (
     <div onSubmit={handleSubmit} className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col">
@@ -43,6 +53,17 @@ const Register = () => {
                 type="name"
                 name="name"
                 placeholder="Your Name"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo</span>
+              </label>
+              <input
+                type="text"
+                name="image"
+                placeholder="Your Photo"
                 className="input input-bordered"
               />
             </div>

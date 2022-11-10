@@ -15,11 +15,9 @@ const Login = () => {
     useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  if (loading) {
-          <div className="w-24 mx-auto my-44">
-        <button className="btn btn-square loading"></button>
-      </div>
-  }
+  if(loading){
+    return <div className='w-24 mx-auto my-44'><button className="btn btn-square loading"></button></div>
+}
 
   const from = location?.state?.from.pathname || "/";
 
@@ -35,7 +33,7 @@ const Login = () => {
           email: user.email
         }
         console.log(currentUser);
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://service-review-server-mu.vercel.app/jwt", {
           method: "POST",
           headers: {
             'content-type': 'application/json'

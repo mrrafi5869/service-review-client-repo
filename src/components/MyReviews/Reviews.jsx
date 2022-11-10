@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Reviews = ({ review, handleDelete }) => {
   const { _id, serviceName, price, user, userEmail, userReview, service } =
@@ -7,7 +8,7 @@ const Reviews = ({ review, handleDelete }) => {
   // const {user} = useContext(AuthContext)
   const [reviews, setReviews] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${service}`)
+    fetch(`https://service-review-server-mu.vercel.app/service/${service}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [service]);
@@ -41,7 +42,7 @@ const Reviews = ({ review, handleDelete }) => {
       </td>
       <td>{price}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">details</button>
+        <Link to={`/details/${_id}`}><button className="btn btn-ghost btn-xs">details</button></Link>
       </th>
     </tr>
   );

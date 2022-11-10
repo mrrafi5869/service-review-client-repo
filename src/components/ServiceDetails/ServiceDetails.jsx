@@ -13,7 +13,7 @@ const ServiceDetails = () => {
 
   const [ownReview, setOwnReview] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/reviews')
+    fetch('https://service-review-server-mu.vercel.app/reviews')
     .then(res => res.json())
     .then(data => setOwnReview(data));
   }, [])
