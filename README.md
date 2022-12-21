@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+* This website is made by HTML, CSS, Tailwind, React, NodeJS, ExpressJS, MongoDB, Firebase, Vercel.After opening the website You will see the Home Page and there are a navbar, carousel image, services, footer and some sections.In home page you can see three services but if you click the see all button you can see all services.And Every service has a image, review button, details button and others information.If you want to review any service You have to login.After clicking the review button you will see a form and you have to fill up the form to send review also click the send button.
+* After Login or register you can see "my reviews, Add Service, Login" button.If you click the my reviews button you can see all reviews Which you sended.And there are all information of those services.And There are update button and delete button.If you click the update button you will see a form and you have to fill up the form if you want to update.On the otherhand, If you click the delte button so the review will delete.
+* There are a Add Service button on the navbar. If You click this button You will add a service.Every Service have a details button.Afte clicking the button You will redirect other page and see the details of services also you will see all reviews of this Service If you are loged in
