@@ -35,7 +35,7 @@ const Header = () => {
           <li>
             <Link className="text-blue-300 text-xl hover:text-black">
               <FontAwesomeIcon icon={faPhone} />
-              +971404453
+              +971404456
             </Link>
           </li>
         </ul>
