@@ -19,32 +19,37 @@ const Header = () => {
   return (
     <div className="navbar flex justify-between flex-row-reverse md:flex-row w-3/4 md:mx-auto">
       <div className="">
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
+        <Link to="/" className="btn btn-ghost normal-case lg:text-xl">
           DreamWeaver{" "}
-          <FontAwesomeIcon icon={faCameraRetro} className="ml-3 text-3xl" />
+          <FontAwesomeIcon
+            icon={faCameraRetro}
+            className="ml-1 lg:ml-3 text-xl lg:text-3xl"
+          />
         </Link>
       </div>
       <div className="navbar-end">
-        <div className="hidden lg:flex">
-          <ul className="menu menu-horizontal p-0 flex items-center font-semibold text-lg">
+        <div className="hidden md:flex">
+          <ul className="menu menu-horizontal flex items-center font-semibold lg:text-lg">
             <li>
-              <Link to="/">HOME</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/blog">BLOG</Link>
+              <Link to="/blog">Blog</Link>
             </li>
-            <h1>
+            <>
               {user?.uid ? (
                 <>
-                  <Link to="/myreviews">
-                    <button className="btn btn-sm mr-4">My Reviews</button>
-                  </Link>
-                  <Link to="/myservices">
-                    <button className="btn btn-sm mr-4">Add Service</button>
-                  </Link>
-                  <button className="btn btn-sm mr-4" onClick={handleLogOut}>
-                    Logout
-                  </button>
+                  <li>
+                    <Link to="/myreviews">My Reviews</Link>
+                  </li>
+                  <li>
+                    <Link to="/myservices">Add Service</Link>
+                  </li>
+
+                  <li>
+                    <button onClick={handleLogOut}>Logout</button>
+                  </li>
+
                   <span>{user?.displayName}</span>
                   <img
                     className="mx-5 inline"
@@ -64,11 +69,11 @@ const Header = () => {
                   </span>
                 </div>
               )}
-            </h1>
+            </>
           </ul>
         </div>
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -98,7 +103,7 @@ const Header = () => {
               {user?.uid ? (
                 <>
                   <li>
-                    <Link to='/myReviews' className="w-32">
+                    <Link to="/myReviews" className="w-32">
                       My Reviews
                     </Link>
                   </li>
@@ -108,11 +113,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                    to="/logout"
-                      className="w-32"
-                      onClick={handleLogOut}
-                    >
+                    <Link to="/logout" className="w-32" onClick={handleLogOut}>
                       Logout
                     </Link>
                   </li>
