@@ -9,7 +9,7 @@ const Service = (params) => {
     const {service} = params;
     const {_id, img, name, price, desc} = service;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-72 lg:w-96 bg-base-100 shadow-xl">
       <figure>
         <PhotoProvider>
             <PhotoView src={img}>
@@ -24,7 +24,7 @@ const Service = (params) => {
           <FontAwesomeIcon icon={faCameraRetro}></FontAwesomeIcon>
         </h2>
         <p>{desc.length > 100 ? desc.slice(0, 99) + "..." : desc}</p>
-        <p className="font-bold ml-60">Price:{price}</p>
+        <p className="font-bold">Price:{price}</p>
         <div className="card-actions justify-end">
           <Link to= {`/review/${_id}`} className="bg-blue-400 w-full p-3 border-2 text-white text-center font-semibold rounded-lg">Review</Link>
           <Link to={`/service/${_id}`} className="btn btn-outline rounded-lg font-semibold hover:bg-gray-500 hover:text-white w-full">Details<FontAwesomeIcon icon={faArrowRight} className="ml-1"></FontAwesomeIcon></Link>
