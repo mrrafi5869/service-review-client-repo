@@ -13,7 +13,7 @@ const Service = (params) => {
       <figure>
         <PhotoProvider>
             <PhotoView src={img}>
-                <img src={img} alt={name} />
+                <img src={img} className="w-full h-52" alt={name} />
             </PhotoView>
         </PhotoProvider>
       </figure>

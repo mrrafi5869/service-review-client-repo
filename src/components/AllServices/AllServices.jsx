@@ -1,6 +1,7 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import { Link } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
 
@@ -18,7 +19,11 @@ const AllServices = () => {
         {
         services.map(service => <div key={service._id} className="card card-compact w-72 lg:w-96 bg-base-100 shadow-xl">
         <figure>
-          <img src={service.img} alt="Shoes" />
+          <PhotoProvider>
+            <PhotoView src={service.img}>
+                <img src={service.img} className="w-full h-52" alt="Service" />
+            </PhotoView>
+        </PhotoProvider>
         </figure>
         <div className="card-body">
           <h2 className="card-title">{service.name}</h2>
