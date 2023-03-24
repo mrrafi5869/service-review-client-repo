@@ -70,8 +70,8 @@ const MyReviews = () => {
                       </label>
                     </th>
                     <th>Name</th>
-                    <th>Job</th>
-                    <th>Favorite Color</th>
+                    <th>Email & Reviews</th>
+                    <th>Price</th>
                     <th></th>
                   </tr>
                 </thead>

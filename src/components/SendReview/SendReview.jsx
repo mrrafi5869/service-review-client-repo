@@ -51,7 +51,7 @@ const SendReview = () => {
   return (
     <div>
       <h1 className="text-4xl font-bold text-center my-10">{name}</h1>
-      <form onSubmit={handleSendReview} className="w-9/12 mx-auto">
+      <form onSubmit={handleSendReview} className="md:w-9/12 mx-2 md:mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <input
             name="firstName"

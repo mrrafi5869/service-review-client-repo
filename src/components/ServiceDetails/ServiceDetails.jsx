@@ -18,10 +18,10 @@ const ServiceDetails = () => {
     .then(data => setOwnReview(data));
   }, [])
   const myDatas = ownReview.filter(same => same.serviceName === name)
-
+  console.log(myDatas);
   return (
-    <div className="flex w-9/12 mx-auto my-36 justify-between">
-      <div className="card w-96 bg-base-100 shadow-xl mr-40 h-full">
+    <div className="flex lg:w-9/12 mx-auto my-5 lg:my-36 lg:justify-between">
+      <div className="card md:w-96 bg-base-100 shadow-xl mx-3 lg:mr-40 h-full">
         <figure>
           <img src={img} alt={name} />
         </figure>
