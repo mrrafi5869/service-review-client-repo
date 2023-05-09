@@ -107,7 +107,7 @@ const DetailsUpdate = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary" onClick={handleUpdate}>Register</button>
+              <button className="btn btn-primary" onClick={handleUpdate}>Update</button>
             </div>
           </form>
     );

@@ -1,0 +1,32 @@
+.box{
+    background-position: top;
+    transition: ease-in-out 3s;
+}
+
+.box.box1{
+    background: url("../../../assets/images/slide\ \(1\).jpg");
+    background-size: cover;
+}
+.box.box2{
+    background: url("../../../assets/images/slide\ \(2\).jpg");
+    background-size: cover;
+}
+.box.box3{
+    background: url("../../../assets/images/slide\ \(6\).jpg");
+    background-size: cover;
+}
+.box.box4{
+    background: url("../../../assets/images/slide\ \(4\).jpg");
+    background-size: cover;
+}
+.box.box5{
+    background: url("../../../assets/images/slide\ \(5\).jpg");
+    background-size: cover;
+}
+.box.box6{
+    background: url("../../../assets/images/slide\ \(3\).jpg");
+    background-size: cover;
+}
+.box:hover{
+    background-position: bottom;
+}

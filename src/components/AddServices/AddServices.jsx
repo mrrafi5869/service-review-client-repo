@@ -35,41 +35,43 @@ const AddServices = () => {
         })
     }
     return (
-        <form onSubmit={handleSendReview} className="w-9/12 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <input
-            name="image"
-            // defaultValue={firstName}
-            type="text"
-            placeholder="Enter Your image link"
-            className="input w-full input-bordered my-3"
-            required
-          />
-          <input
-            name="name"
-            // defaultValue={lastName}
-            type="text"
-            placeholder="Service Name"
-            className="input w-full input-bordered my-3"
-            required
-          />
-          <input
-            name="price"
-            type="text"
-            placeholder="Service Price"
-            className="input w-full input-bordered my-3"
-          />
-          <input
-            name="desc"
-            type="text"
-            placeholder="Description"
-            className="input w-full input-bordered my-3"
-          />
-        </div>
-        <div className="flex justify-center my-9">
-          <input className="btn btn-primary w-32" type="submit" value="Send" />
-        </div>
-      </form>
+          <form onSubmit={handleSendReview} className="w-9/12 mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <input
+              name="image"
+              // defaultValue={firstName}
+              type="text"
+              placeholder="Enter Your image link"
+              className="input w-full input-bordered my-3"
+              required
+            />
+            <input
+              name="name"
+              // defaultValue={lastName}
+              type="text"
+              placeholder="Service Name"
+              className="input w-full input-bordered my-3"
+              required
+            />
+            <input
+              name="price"
+              type="text"
+              placeholder="Service Price"
+              className="input w-full input-bordered my-3"
+              required
+            />
+            <input
+              name="desc"
+              type="text"
+              placeholder="Description"
+              className="input w-full input-bordered my-3"
+              required
+            />
+          </div>
+          <div className="flex justify-center my-9">
+            <input className="btn btn-primary w-32" type="submit" value="Send" />
+          </div>
+        </form>
     );
 };
 
