@@ -4,22 +4,27 @@ import Gallery from './Gallery/Gallery';
 import Services from './Services/Services';
 import ImageSwiper from "./Swiper/ImageSwiper";
 import AutoScroll from "./AutoSlider/AutoScroll";
+import ShowCase from "./ShowCase/ShowCase";
+import Couple from "./Couple/Couple";
+import Edit from "./Edit/Edit";
+import PortfolioVideo from "./PortfolioVideo/PortfolioVideo";
+import MakeOrder from "./MakeOrder/MakeOrder";
 
 const Home = () => {
 
   return (
     <>
-      {/* carousel */}
       <Carousel></Carousel>
-      {/* services */}
       <Services></Services>
-      {/* Reason for hire us */}
+      <Couple></Couple>
       <HireMe></HireMe>
+      <ShowCase></ShowCase>
+      <Edit></Edit>
+      <PortfolioVideo></PortfolioVideo>
       <AutoScroll></AutoScroll>
-      {/* gallery/Photos */}
       <Gallery></Gallery>
-      {/* swiper */}
       <ImageSwiper></ImageSwiper>
+      <MakeOrder></MakeOrder>
     </>
   );
 };

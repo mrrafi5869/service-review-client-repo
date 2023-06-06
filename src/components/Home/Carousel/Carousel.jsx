@@ -5,7 +5,7 @@ const Carousel = () => {
         <div className="carousel lg:w-3/4 mx-auto">
         <div id="slide1" className="carousel-item relative w-full">
           <img
-            src="https://images.unsplash.com/photo-1598218674125-61de0837f8ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZHNscnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://img.freepik.com/free-photo/close-up-young-woman-taking-pictures-outdoors-professional-slr-camera_169016-10588.jpg?size=626&ext=jpg&ga=GA1.1.207808977.1658386615&semt=sph"
             alt=""
             className="w-full h-3/4"
           />
