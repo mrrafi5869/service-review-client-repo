@@ -41,7 +41,7 @@ const ShowCase = () => {
     ]
     return (
         <div className='w-9/12 mx-auto mt-24 mb-24'>
-            <h1 className='text-center text-5xl mt-[10%] mb-12 text-yellow-800 font-semibold italic'>ShowCase</h1>
+            <h1 className='text-center text-2xl md:text-5xl mt-[10%] mb-4 md:mb-12 text-yellow-800 font-semibold italic'>ShowCase</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center relative overflow-hidden bg-cover bg-no-repeat'>
                 {
                     images.map(image => <img src={image.img} className='transition duration-300 ease-in-out hover:scale-110' alt=''></img>)

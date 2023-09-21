@@ -1,5 +1,5 @@
 import HireMe from "./HireMe/HireMe";
-import Carousel from './Carousel/Carousel';
+// import Carousel from './Carousel/Carousel';
 import Gallery from './Gallery/Gallery';
 import Services from './Services/Services';
 import ImageSwiper from "./Swiper/ImageSwiper";
@@ -9,12 +9,13 @@ import Couple from "./Couple/Couple";
 import Edit from "./Edit/Edit";
 import PortfolioVideo from "./PortfolioVideo/PortfolioVideo";
 import MakeOrder from "./MakeOrder/MakeOrder";
+import SwiperTop from "./SwiperTop/SwiperTop";
 
 const Home = () => {
 
   return (
     <>
-      <Carousel></Carousel>
+      <SwiperTop></SwiperTop>
       <Services></Services>
       <Couple></Couple>
       <HireMe></HireMe>

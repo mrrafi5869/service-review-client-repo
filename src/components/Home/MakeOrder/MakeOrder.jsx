@@ -2,7 +2,7 @@ import React from "react";
 
 const MakeOrder = () => {
   return (
-    <div className="w-9/12 mx-auto flex justify-around my-16">
+    <div id="contact" className="w-9/12 mx-auto flex flex-col lg:flex-row justify-around my-16">
       <div>
         <h1 className="text-2xl text-indigo-600 font-semibold mb-8">Order Now</h1>
         <p className="font-serif mb-8">
@@ -21,15 +21,16 @@ const MakeOrder = () => {
           className="input input-bordered block w-full rounded-none mb-8"
         />
         <textarea
-          className="textarea textarea-bordered rounded-none"
+          className="textarea textarea-bordered rounded-none w-full mb-8"
           rows="2"
-          cols="65"
+          // cols="65"
           placeholder="Bio"
+          style={{ resize: "none" }}
         ></textarea>
         {/* <br /> */}
         <button
           href="#_"
-          class="relative block py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-300 group"
+          class="relative block py-3 pl-4 pr-12 mb-8 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-300 group"
         >
           <span class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
           <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">

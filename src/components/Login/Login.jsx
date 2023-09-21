@@ -74,9 +74,9 @@ const Login = () => {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-2xl md:text-5xl font-bold">Login now!</h1>
         </div>
-        <div className="card flex-shrink-0 w-96 max-w-sm shadow-2xl bg-base-100">
+        <div className="card shadow-2xl bg-base-100">
           <form onSubmit={handleSubmit} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -118,7 +118,7 @@ const Login = () => {
               </p>
               <button
                 onClick={handleGoogleSignIn}
-                className="btn btn-ghost border-black mb-3 text-red-400"
+                className="btn btn-ghost border-black mb-3 text-blue-500"
               >
                 <FaGoogle className="text-blue-500 text-xl mr-2"></FaGoogle>{" "}
                 GOOGLE

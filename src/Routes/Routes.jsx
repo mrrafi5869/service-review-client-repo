@@ -11,6 +11,10 @@ import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import SendReview from "../components/SendReview/SendReview";
 import ServiceDetails from "../components/ServiceDetails/ServiceDetails";
 import Main from "../Layout/Main";
+import HireMe from "../components/Home/HireMe/HireMe";
+import MakeOrder from "../components/Home/MakeOrder/MakeOrder";
+import PortfolioVideo from "../components/Home/PortfolioVideo/PortfolioVideo";
+import Services from "../components/Home/Services/Services";
 
 export const routes = createBrowserRouter([
     {
@@ -32,6 +36,22 @@ export const routes = createBrowserRouter([
             {
                 path: "/blog",
                 element: <Blog></Blog>
+            },
+            {
+                path: "/services",
+                element: <Services></Services>
+            },
+            {
+                path: "/about",
+                element: <HireMe></HireMe>
+            },
+            {
+                path: "/sample",
+                element: <PortfolioVideo></PortfolioVideo>
+            },
+            {
+                path: "/contact",
+                element: <MakeOrder></MakeOrder>
             },
             {
                 path: "/service/:id",

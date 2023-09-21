@@ -1,0 +1,34 @@
+/* .swiper {
+    width: 100%;
+    height: 1200px;
+  } */
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide .image {
+    display: block;
+    width: 100%;
+    height: 1200px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 767px) {
+    .swiper-slide .image {
+      height: 400px; /* Adjust the height for mobile screens as needed */
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .swiper-slide .image {
+      height: 800px; /* Adjust the height for tablets as needed */
+    }
+  }
